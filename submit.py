@@ -1,4 +1,7 @@
 #!/usr/bin/env python
+
+import sys
+
 class InputApi(object):
   """An instance of this object is passed to presubmit scripts so they can
   know stuff about the change they're looking at.
@@ -247,5 +250,6 @@ def main(argv = None):
  change = InputApi("", "./devtools", False, None, True)
  #PRESUBMIT.CheckChangeOnUpload(change)
  print(change)
+ return 0
 
 sys.exit(main())
