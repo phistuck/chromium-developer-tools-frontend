@@ -29,15 +29,6 @@ import types
 import unittest  # Exposed through the API.
 import urllib2  # Exposed through the API.
 from warnings import warn
-# Local imports.
-import auth
-import fix_encoding
-import gclient_utils
-import owners
-import presubmit_canned_checks
-import rietveld
-import scm
-import subprocess2 as subprocess  # Exposed through the API.
 # Ask for feedback only once in program lifetime.
 _ASKED_FOR_FEEDBACK = False
 
