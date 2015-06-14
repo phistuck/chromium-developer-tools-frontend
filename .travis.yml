@@ -5,4 +5,5 @@ before_install:
 #script: python submit.py
 script:
  - cd devtools
+ - python ../depot_tools/git_cl.py config
  - python ../depot_tools/git_cl.py upload
