@@ -2,6 +2,8 @@
 
 import sys
 
+__version__ = "1.1"
+
 class InputApi(object):
   """An instance of this object is passed to presubmit scripts so they can
   know stuff about the change they're looking at.
