@@ -243,6 +243,9 @@ class InputApi(object):
 
 
 def main(argv = None):
+ print("Here")
  change = InputApi("", "./devtools", False, None, True)
- PRESUBMIT.CheckChangeOnUpload(change)
+ #PRESUBMIT.CheckChangeOnUpload(change)
+ print(change)
 
+sys.exit(main())
