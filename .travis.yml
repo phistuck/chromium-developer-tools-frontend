@@ -8,4 +8,4 @@ script:
 # - python ../depot_tools/git_cl.py config
 # - python ../depot_tools/git_cl.py upload
 # - python -u ./depot_tools/presubmit_support.py --root ./devtools --commit --verbose --verbose --issue 12853011 --patchset 1 --skip_canned CheckRietveldTryJobExecution --skip_canned CheckTreeIsOpen --skip_canned CheckBuildbotPendingBuilds --rietveld_url https://codereview.chromium.org --rietveld_fetch --upstream 80754af91bfb6d1073585b046fe0a474ce868509 --trybot-json ./json --rietveld_email me@domain.ext
- - python -u ./depot_tools/presubmit_support.py --root ./devtools --commit --verbose --verbose --skip_canned CheckRietveldTryJobExecution --skip_canned CheckTreeIsOpen --skip_canned CheckBuildbotPendingBuilds
+ - python -u ./depot_tools/presubmit_support.py --root ./devtools --commit --verbose --verbose --skip_canned CheckRietveldTryJobExecution --skip_canned CheckTreeIsOpen --skip_canned CheckBuildbotPendingBuilds --skip_canned CheckOwners --skip_canned --upstream HEAD~
