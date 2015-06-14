@@ -1,0 +1,8 @@
+language: python
+python:
+  - "2.7"
+before_install:
+  - git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
+  - export PATH=`pwd`/depot_tools:"$PATH"
+install: gclient
+script: presubmit.py
