@@ -2,6 +2,7 @@ sudo: required
 before_install:
   - git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git
   - export PATH=`pwd`/depot_tools:"$PATH"
-install: gclient
-before_script: ls -la
-script: python submit.py
+#script: python submit.py
+script:
+ - cd devtools
+ - python ../depot_tools/git_cl.py upload
