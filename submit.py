@@ -1,8 +1,45 @@
 #!/usr/bin/env python
 
-import sys, os
-
-__version__ = "1.1"
+__version__ = '1.8.0'
+# TODO(joi) Add caching where appropriate/needed. The API is designed to allow
+# caching (between all different invocations of presubmit scripts for a given
+# change). We should add it as our presubmit scripts start feeling slow.
+import cpplint
+import cPickle  # Exposed through the API.
+import cStringIO  # Exposed through the API.
+import contextlib
+import fnmatch
+import glob
+import inspect
+import itertools
+import json  # Exposed through the API.
+import logging
+import marshal  # Exposed through the API.
+import multiprocessing
+import optparse
+import os  # Somewhat exposed through the API.
+import pickle  # Exposed through the API.
+import random
+import re  # Exposed through the API.
+import sys  # Parts exposed through API.
+import tempfile  # Exposed through the API.
+import time
+import traceback  # Exposed through the API.
+import types
+import unittest  # Exposed through the API.
+import urllib2  # Exposed through the API.
+from warnings import warn
+# Local imports.
+import auth
+import fix_encoding
+import gclient_utils
+import owners
+import presubmit_canned_checks
+import rietveld
+import scm
+import subprocess2 as subprocess  # Exposed through the API.
+# Ask for feedback only once in program lifetime.
+_ASKED_FOR_FEEDBACK = False
 
 class InputApi(object):
   """An instance of this object is passed to presubmit scripts so they can
