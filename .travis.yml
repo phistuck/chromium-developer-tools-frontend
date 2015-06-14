@@ -3,4 +3,4 @@ before_install:
   - export PATH=`pwd`/depot_tools:"$PATH"
 install: gclient
 before_script: ls -la
-script: presubmit.py
+script: PRESUBMIT.py
