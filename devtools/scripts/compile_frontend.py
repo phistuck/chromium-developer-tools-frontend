@@ -425,7 +425,7 @@ print 'Validating InjectedScriptSource.js...'
 injectedscript_check_script_path = path.join(scripts_path, "check_injected_script_source.py")
 validateInjectedScriptProc = popen([sys.executable, injectedscript_check_script_path, injected_script_source_name])
 
-print
+
 
 (jsdocValidatorOut, _) = jsdocValidatorProc.communicate()
 if jsdocValidatorOut:
