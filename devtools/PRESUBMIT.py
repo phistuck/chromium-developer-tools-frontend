@@ -45,6 +45,10 @@ def _CompileDevtoolsFrontend(input_api, output_api):
     # Once this is fixed, injected_script_externs.js
     # should be added to the list of triggers.
     devtools_front_end = input_api.os_path.join("devtools", "front_end")
+    print(devtools_front_end)
+    print("\n")
+    print(local_paths)
+    print("\n")
     if (any(devtools_front_end in path for path in local_paths) or
         any("protocol.json" in path for path in local_paths) or
         any("compile_frontend.py" in path for path in local_paths) or
