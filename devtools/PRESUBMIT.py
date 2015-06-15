@@ -45,10 +45,10 @@ def _CompileDevtoolsFrontend(input_api, output_api):
     # Once this is fixed, injected_script_externs.js
     # should be added to the list of triggers.
     devtools_front_end = input_api.os_path.join("devtools", "front_end")
-    print(devtools_front_end)
-    print("\n")
-    print(local_paths)
-    print("\n")
+    logging.debug(devtools_front_end)
+    logging.debug("\n")
+    logging.debug(local_paths)
+    logging.debug("\n")
     if (any(devtools_front_end in path for path in local_paths) or
         any("protocol.json" in path for path in local_paths) or
         any("compile_frontend.py" in path for path in local_paths) or
@@ -106,7 +106,7 @@ def _CheckOptimizePNGHashes(input_api, output_api):
     absolute_local_paths = [af.AbsoluteLocalPath() for af in input_api.AffectedFiles(include_deletes=False)]
     images_src_path = input_api.os_path.join("devtools", "front_end", "Images", "src")
     image_source_file_paths = [path for path in absolute_local_paths if images_src_path in path and path.endswith(".svg")]
-    image_sources_path = input_api.os_path.join(input_api.PresubmitLocalPath(), "front_end", "Images", "src")
+    image_sources_path = inputde_api.os_path.join(input_api.PresubmitLocalPath(), "front_end", "Images", "src")
     hashes_file_name = "optimize_png.hashes"
     hashes_file_path = input_api.os_path.join(image_sources_path, hashes_file_name)
     invalid_hash_file_paths = devtools_file_hashes.files_with_invalid_hashes(hashes_file_path, image_source_file_paths)
