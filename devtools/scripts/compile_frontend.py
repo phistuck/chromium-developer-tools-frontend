@@ -345,6 +345,9 @@ def dump_module(name, recursively, processed_modules):
         command += jsmodule_name_prefix + dependency
     for script in filtered_scripts:
         command += ' --js ' + to_platform_path(path.join(devtools_frontend_path, name, script))
+    print
+    print command 
+    print
     return command
 
 print 'Compiling frontend...'
