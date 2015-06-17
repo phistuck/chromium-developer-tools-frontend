@@ -15,8 +15,8 @@ function toolboxLoaded()
     var app = window.opener.WebInspector["AdvancedApp"]["_instance"]();
     app["toolboxLoaded"](document);
     
-    var /** @type {Object} */ ca = {};
-    var /** @type {number} */ ka = ca;
+    var /** @type {!Object} */ ca = {};
+    var /** @type {!number} */ ka = ca;
 }
 
 runOnWindowLoad(toolboxLoaded);
