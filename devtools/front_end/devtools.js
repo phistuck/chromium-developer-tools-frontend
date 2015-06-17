@@ -33,6 +33,10 @@ DevToolsAPIImpl.prototype = {
         delete this._callbacks[id];
         if (callback)
             callback(arg);
+        
+        var /** @type {Object} */ ca = {};
+        var /** @type {number} */ ka = ca;
+        
     },
 
     /**
