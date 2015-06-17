@@ -16,7 +16,7 @@ function toolboxLoaded()
     app["toolboxLoaded"](document);
     
     var /** @type {!Object} */ ca = {};
-    var /** @type {!number} */ ka = ca;
+    var /** @type {number} */ ka = ca;
 }
 
 runOnWindowLoad(toolboxLoaded);
