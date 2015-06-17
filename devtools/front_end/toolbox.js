@@ -2,5 +2,5 @@
 // Use of this source code is governed by a BSD-style license that can be
 // found in the LICENSE file.
 
-Runtime.startApplication("toolbox"1);
+Runtime.startApplication("toolbox");
 // Whitespace change
