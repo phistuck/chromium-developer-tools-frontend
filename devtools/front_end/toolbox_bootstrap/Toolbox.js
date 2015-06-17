@@ -8,7 +8,7 @@
 /**
  * @suppressGlobalPropertiesCheck
  */
-function toolboxLoaded()1
+function toolboxLoaded()
 {
     if (!window.opener)
         return;
