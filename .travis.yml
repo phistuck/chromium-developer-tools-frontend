@@ -3,8 +3,8 @@ before_install:
   - git clone https://chromium.googlesource.com/chromium/tools/depot_tools.git --depth=1
   - export PATH=`pwd`/depot_tools:"$PATH"
 script:
- #- python -u ./generate_compile_commands.py
- #- chmod 777 ./compile_frontend_separetely.sh
- #- ./compile_frontend_separetely.sh
- - python -u ./devtools/scripts/compile_frontend.py toolbox_bootstrap
+ - python -u ./generate_compile_commands.py
+ - chmod 777 ./compile_frontend_separetely.sh
+ - ./compile_frontend_separetely.sh
+ #- python -u ./devtools/scripts/compile_frontend.py toolbox_bootstrap
  - python -u ./depot_tools/presubmit_support.py --commit --verbose --verbose --skip_canned CheckRietveldTryJobExecution --skip_canned CheckTreeIsOpen --skip_canned CheckBuildbotPendingBuilds --skip_canned CheckOwners --upstream HEAD~
